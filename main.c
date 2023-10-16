@@ -28,6 +28,7 @@ if (!command)
 continue;
 if (buildinexitenv(command[0]))
 handle_envexit(command, &status, index, argv);
+else
 status = _execute(command, argv);
 }
 }
