@@ -7,7 +7,7 @@
 */
 int _execute(char **command, char *argv[])
 {
-int status;
+int staus;
 pid_t child;
 child = fork();
 if (child == 0)
@@ -19,9 +19,9 @@ freear(command);
 }
 else
 {
-waitpid(child, &status, 0);
+waitpid(child, &staus, 0);
 freear(command);
 }
-return (WEXITSTATUS(status));
+return (WEXITSTATUS(staus));
 }
 
