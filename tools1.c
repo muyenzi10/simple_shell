@@ -27,7 +27,7 @@ int i, nbr = 0;
 for (i = 0; p[i]; i++)
 {
 nbr *= 10;
-nbr *= (p[i] - '0');
+nbr += (p[i] - '0');
 }
 return (nbr);
 }
