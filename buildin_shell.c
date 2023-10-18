@@ -60,6 +60,7 @@ write(STDERR_FILENO, command[1], _strlen(command[1]));
 write(STDERR_FILENO, "\n", 1);
 free(inx);
 freear(command);
+exit(2);
 return;
 }
 }
@@ -81,6 +82,6 @@ write(STDOUT_FILENO, environ[i], _strlen(environ[i]));
 write(STDOUT_FILENO, "\n", 1);
 }
 freear(command);
-(*status) = 2;
+(*status) = 0;
 }
 
