@@ -1,3 +1,5 @@
+#ifndef SHELL_H
+#define SHELL_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -7,16 +9,14 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <errno.h>
-#ifndef SHELL_H
-#define SHELL_H
+/** this is delimiter */
 #define DELIM " \t\n"
+/** this is enviroment extrnal */
 extern char **environ;
 /** functions */
 char *read_line(void);
 char **tokenized(char *line);
 int _execute(char **command, char *argv[]);
-char *_getenv(char *val);
-
 /** about string.c */
 int _strcmp(char *name1, char *name2);
 char *_strdup(const char *str);
